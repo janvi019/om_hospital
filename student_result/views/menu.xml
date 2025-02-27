@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="menu_school_root"
+			  name="Result"
+	/>
+
+	<menuitem id="menu_students"
+			  name="Students"
+			  parent="menu_school_root"
+	/>
+
+	<menuitem id="menu_results"
+			  name="Result"
+			  parent="menu_school_root"
+	/>
+
+	<menuitem id="menu_result"
+			  name="Result"
+			  parent="menu_results"
+			  action="action_school_student_result"
+	/>
+
+	<menuitem id="menu_student"
+			  name="Students"
+			  parent="menu_students"
+			  action="action_school_student"
+	/>
+
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record id="view_school_student_result_tree" model="ir.ui.view">
+		<field name="name">student.result.tree</field>
+		<field name="model">student.result</field>
+		<field name="arch" type="xml">
+			<tree string="Students">
+				<field name="student_id"/>
+				<field name="cla_ss" optional="show"/>
+				<field name="percentage" optional="show"/>
+				<field name="chemistry" optional="show"/>
+				<field name="math" optional="show"/>
+				<field name="physics" optional="show"/>
+				<field name="english" optional="show"/>
+				<field name="declaration_date" optional="show"/>
+
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_school_student_result_form" model="ir.ui.view">
+		<field name="name">student.result.form</field>
+		<field name="model">student.result</field>
+		<field name="arch" type="xml">
+			<form string="Students">
+				<sheet>
+					<group>
+						<group>
+							<field name="student_id"/>
+							<field name="chemistry"/>
+							<field name="math"/>
+							<field name="physics"/>
+							<field name="english"/>
+						</group>
+						<group>
+							<field name="cla_ss"/>
+							<field name="percentage"/>
+							<field name="declaration_date"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_school_student_result" model="ir.actions.act_window">
+		<field name="name">Result</field>
+		<field name="res_model">student.result</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>
